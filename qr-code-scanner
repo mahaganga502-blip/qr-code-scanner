@@ -1,0 +1,31 @@
+# QR Code Scanner
+# No external libraries required
+print("===== QR CODE SCANNER =====")
+qr_database = {
+    "QR001": "https://example.com",
+    "QR002": "https://github.com",
+    "QR003": "Hello, Welcome!",
+    "QR004": "Student Project"
+}
+print("\nAvailable QR Codes:")
+for code in qr_database:
+    print("-", code)
+code = input("\nScan/Enter QR Code: ")
+if code in qr_database:
+    print("\nQR Code Detected!")
+    print("QR Code:", code)
+    print("Data:", qr_database[code])
+else:
+    print("\nQR Code not recognized.")
+
+OUTPUT:
+===== QR CODE SCANNER =====
+Available QR Codes:
+- QR001
+- QR002
+- QR003
+- QR004
+Scan/Enter QR Code: QR001
+QR Code Detected!
+QR Code: QR001
+Data: https://example.com
